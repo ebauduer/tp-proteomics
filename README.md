@@ -171,34 +171,42 @@ df = pandas.read_csv()
 
 Quel est le type de l'objet `df`?
 ```
-
+pandas.core.frame.DataFrame
 ```
 
 ##### Descriptions d'une table de données
 Que permettent les méthodes suivantes?
 ###### df.shape
 ```
+Cette méthode permet d'afficher la taille du dataframe (ici : 2024, 7).
 ```
 ###### df.head()
 ```
+Cette méthode permet de donner les 5 premières lignes du df.
 ```
 ###### df.tail()
 ```
+Cette méthode permet de donner les 5 dernières lignes du df.
 ```
 ###### df.columns
 ```
+Cette méthode permet d'afficher les noms des colonnes du df.
 ```
 ###### df.dtypes
 ```
+Cette méthode permet d'afficher les types contenus dans chacune des colonnes du df.
 ```
 ###### df.info
 ```
+Cette méthode permet d'afficher le début et la fin du df, ainsi que ses dimensions.
 ```
 ###### df.describe()
 ```
+Cette méthode permet de donner les statistiques des données numériques par colonne.
 ```
 ###### df.dropna()
 ```
+Cette méthode permet de ne conserver que les colonnes ne contenant pas d'info manquantes (NAs).
 ```
 
 ##### Accès aux éléments d'une table de données
@@ -208,6 +216,7 @@ values = df[['Description', 'Gene Symbol']]
 ```
 
 Quel est le type de `values` ?
+pandas.core.frame.DataFrame
 
 Verifiez si certaines méthodes de `DataFrame` lui sont applicables.
 Ce type supporte l'accès par indice et les slice `[a:b]`
@@ -218,17 +227,17 @@ On peut accéder aux valeurs du DataFrame via des indices ou plages d'indice. La
 Il y a différentes manières de le faire, l'utilisation de `.iloc[slice_ligne,slice_colonne]` constitue une des solutions les plus simples. N'oublions pas que shape permet d'obtenir les dimensions (lignes et colonnes) du DataFrame.
 ###### Acceder aux cinq premières lignes de toutes les colonnes
 ```python
-
+df.head()
 ```
 
 ###### Acceder à toutes les lignes de la dernière colonne
 ```python
-
+df.iloc[:, -1]
 ```
 
 ###### Acceder aux cinq premières lignes des colonnes 0, 2 et 3
 ```python
-
+df.iloc[0:4, [0,2,3]]
 ```
 
 ##### Conversion de type
@@ -280,8 +289,8 @@ df.loc[ df['Gene Symbol'].isin(['fadR', 'arcA'] ) ]
 
 ##### 3. A partir de cette échantillon de ratio d'abondance,  estimez la moyenne $\mu$ et l'ecart-type $\sigma$ d'une loi normale.
 ```
-
-
+$\mu$ = -0.63862621564433
+$\sigma$ = 0.47062451611275236
 ```
 
 ##### 4. Superposez la densité de probabilité de cette loi sur l'histogramme. Attention, la densité de probabilité devra être mis à l'echelle de l'histogramme (cf ci-dessous)
@@ -302,8 +311,7 @@ ax.plot(x, norm.pdf(x, mu, sigma)*scale) # compute theoritical PDF and draw it
 ##### 5. Quelles remarques peut-on faire à l'observation de l'histogramme et de la loi théorique?
 
 ```
-
-
+L'histogramme ne fitte pas très bien à la loi théorique normale : on peut supposer que la distribution n'est pas normale.
 ```
 
 #### Construction d'un volcano plot
