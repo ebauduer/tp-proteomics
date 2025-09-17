@@ -289,8 +289,8 @@ df.loc[ df['Gene Symbol'].isin(['fadR', 'arcA'] ) ]
 
 ##### 3. A partir de cette échantillon de ratio d'abondance,  estimez la moyenne $\mu$ et l'ecart-type $\sigma$ d'une loi normale.
 ```
-
-
+$\mu$ = -0.63862621564433
+$\sigma$ = 0.47062451611275236
 ```
 
 ##### 4. Superposez la densité de probabilité de cette loi sur l'histogramme. Attention, la densité de probabilité devra être mis à l'echelle de l'histogramme (cf ci-dessous)
@@ -311,8 +311,7 @@ ax.plot(x, norm.pdf(x, mu, sigma)*scale) # compute theoritical PDF and draw it
 ##### 5. Quelles remarques peut-on faire à l'observation de l'histogramme et de la loi théorique?
 
 ```
-
-
+L'histogramme ne fitte pas très bien à la loi théorique normale : on peut supposer que la distribution n'est pas normale.
 ```
 
 #### Construction d'un volcano plot
