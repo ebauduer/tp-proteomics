@@ -334,9 +334,7 @@ Nous allons implementer une approche ORA (Over Representation Analysis) naive.
 
 Quelles sont leurs identifiants UNIPROT ?
 ``` 
-
-
-
+P23721, P77804, P0A6K6, P0A799, P0A7G6, P0A6F3, P25745, P0A6M8, P0A6L0, P0A8V6, P0A9Q1, P02358, P0ACF8, P62399, P0A905, P76506, P13036, P10384, P06971, P0A910, P06996, P76344, P02931
 ```
 
 #### 2. Lister les termes GO portés par ces protéines surabondates
@@ -404,10 +402,10 @@ Completer le tableau ci-dessous avec les quantités vous semblant adéquates pou
 
 | Symboles | Paramètres | Quantités Biologiques |
 | --- | --- | --- |
-| k | nombre de succès observés| |
-| K | nombre de succès possibles| |
-| n | nombre d'observations| |
-| N | nombre d'elements observables| |
+| k | nombre de succès observés| protéines surabondantes portant le terme GO |
+| K | nombre de succès possibles| protéines portant le terme GO |
+| n | nombre d'observations| 23 |
+| N | nombre d'elements observables| 1746 |
 
 #### 4. Calcul de l'enrichissement en fonction biologiques
 
@@ -416,10 +414,20 @@ de chaque terme GO portés par les protéines surabondantes. Vous reporterez ces
 
 | identifiant GO | définition | occurence | pvalue|
 |---|---|---|---|
-|   |   |   |   |
+|  0009279 |  cell outer membrane |  8 |  5.5560849404544907e-05 |
+|  0009264 |  deoxyribonucleotide catabolic process | 2  | 0.0001660775181585745  |
+|  0034220 | ion transmembrane transport  |  3 |  0.00040704322737514 |
+| 0046930  | pore complex  |  3 | 0.0016877494905572857  |
+| 0015288  |  porin activity |  3 | 0.0019685371712014023  |
+| 0038023  |  signalling receptor activity |  2 |  0.0024121979055529495 |
+| 0015344  | siderophore uptake transmembrane transporter activity  |  2 |  0.004430957467833508 |
+|  0055072 |  iron ion homeostasis |  2 |  0.011858122201153506 |
+| 0004648  | O-phospho-L-serine:2-oxoglutarate aminotransferase activity  |  1 |  0.013172966781214202 |
+| 0006563  | L-serine metabolic process  | 1  |  0.013172966781214202 |
 
 Quelle interpretation biologique faites-vous de cet enrichissement en termes GO ?
 
+Les protéines surabondantes sont liées à des fonctions de transport transmembranaire.
 
 ### Analyse des interactions répertoriées dans STRING
 
