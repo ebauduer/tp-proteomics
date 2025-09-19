@@ -452,7 +452,7 @@ Combien d'interactions contient ce réseau ?
 Ce réseau contient 38 intéractions (edges).
 ```
 
-(reseau_fonctionnel.png "Title")
+!(reseau_fonctionnel.png "Title")
 
 Faire varier les paramètres de visualisation du réseau dans 'Settings' pour afficher le réseau fonctionnel
 ou physique avec différents indices de confiance.
