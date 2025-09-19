@@ -452,7 +452,7 @@ Combien d'interactions contient ce réseau ?
 Ce réseau contient 38 intéractions (edges).
 ```
 
-!![Réseau fonctionnel](reseau_fonctionnel.png "Title")
+![Réseau fonctionnel](reseau_fonctionnel.png "Title")
 
 Faire varier les paramètres de visualisation du réseau dans 'Settings' pour afficher le réseau fonctionnel
 ou physique avec différents indices de confiance.
@@ -466,7 +466,7 @@ Hint: l'onglet Analysis, donne accès aux nombre des interactions du réseau.
 Noeuds très interconnectés : protéines de formations de pores membranaires ; protéines d'élongation de chaines (associées à l'activité ribosomale)
 Noeuds isolés : catalyse de modifications post-traductionnelles
 
-- Textmining : 29 interactions
+- Textmining : 29
 - Experiments : 8
 - Databases : 4
 - Co-expression : 9
@@ -482,6 +482,8 @@ Consulter la rubrique 'Network Stats' dans l'onglet Analysis.
 Que peut-on en conclure sur les interactions de ce petit ensemble de protéines ?
 ```
 Nos protéines intéragissent significativement plus que si un groupe de protéines aléatoire avait été sélectionné. Cela signifie qu'elles sont biologiquement liées, qu'elles appartiennent probablement à un ou plusieurs mêmes groupes fonctionnels.
+
+Coeur du réseau : outer membrane protein
 ```
 
 Afin de replacer ces protéines dans le contexte du réseau d'interaction global de E. coli, 
@@ -489,9 +491,13 @@ ajouter les interacteurs de la première et de la deuxième couche.
 
 Que pouvez-vous en déduire sur les mécanismes activés par la présente de tétracycline ?
 ```
+On obtient un réseau de 33 noeuds et 128 interactions (contre 23 noeuds et 38 interactions sur notre réseau originel).
 
+Sur les 10 protéines rajoutées, on rajoute principalement des protéines ribosomales.
 
-
+Les mécanismes activés par la présence de tétracycline sont :
+- export (expulsion) de molécules (transport membranaire)
+- synthèse protéique
 
 ```
 #### Analyse de sur-représentation des termes GO
@@ -500,10 +506,9 @@ Consulter l'analyse de sur-représention des termes GO présents dans l'onglet '
 Est-ce cohérent avec votre analyse précédente ?
 
 ```
+GO:0030313, GO:0045203, GO:0031230, GO:0009279, GO:0046930, GO:0015288, GO:0006811, GO:0002181, GO:0006412, GO:0000027, 
 
-
-
-
+Fonctions de transport membranaire et ribosomales si on ne conserve que les sources expérimentales donc oui c'est cohérent.
 ```
 
 
