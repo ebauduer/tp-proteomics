@@ -427,7 +427,9 @@ de chaque terme GO portés par les protéines surabondantes. Vous reporterez ces
 
 Quelle interpretation biologique faites-vous de cet enrichissement en termes GO ?
 
+```
 Les protéines surabondantes sont liées à des fonctions de transport transmembranaire.
+```
 
 ### Analyse des interactions répertoriées dans STRING
 
@@ -447,12 +449,10 @@ Valider le mapping produit par STRING en clickant sur 'Continue'.
 Combien d'interactions contient ce réseau ?
 
 ```
-
-
-
-
+Ce réseau contient 38 intéractions (edges).
 ```
 
+(reseau_fonctionnel.png "Title")
 
 Faire varier les paramètres de visualisation du réseau dans 'Settings' pour afficher le réseau fonctionnel
 ou physique avec différents indices de confiance.
@@ -463,10 +463,16 @@ Combien d'interactions sont supportées par chaque source ('Textmining', 'Experi
 
 Hint: l'onglet Analysis, donne accès aux nombre des interactions du réseau.
 ```
+Noeuds très interconnectés : protéines de formations de pores membranaires ; protéines d'élongation de chaines (associées à l'activité ribosomale)
+Noeuds isolés : catalyse de modifications post-traductionnelles
 
-
-
-
+- Textmining : 29 interactions
+- Experiments : 8
+- Databases : 4
+- Co-expression : 9
+- Neighborhood : 1
+- Gene Fusion : 0
+- Co-occurence : 7
 ```
 
 #### Analyse du réseau des protéines sur-exprimées dans le contexte du réseau global.
@@ -475,10 +481,7 @@ Consulter la rubrique 'Network Stats' dans l'onglet Analysis.
 
 Que peut-on en conclure sur les interactions de ce petit ensemble de protéines ?
 ```
-
-
-
-
+Nos protéines intéragissent significativement plus que si un groupe de protéines aléatoire avait été sélectionné. Cela signifie qu'elles sont biologiquement liées, qu'elles appartiennent probablement à un ou plusieurs mêmes groupes fonctionnels.
 ```
 
 Afin de replacer ces protéines dans le contexte du réseau d'interaction global de E. coli, 
